@@ -1,4 +1,5 @@
 import { AppPage } from './app.po';
+import { browser } from 'protractor';
 
 describe('App', () => {
   let page: AppPage;
@@ -13,6 +14,7 @@ describe('App', () => {
   });
 
   it('データフェッチが動く', () => {
+    page.navigateTo();
     page.getFetchLink().click();
     expect(page.getFetchDataDate()).toEqual('unko');
   });
