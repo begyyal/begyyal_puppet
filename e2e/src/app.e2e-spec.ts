@@ -11,4 +11,9 @@ describe('App', () => {
     page.navigateTo();
     expect(page.getMainHeading()).toEqual('Hello, world!');
   });
+
+  it('データフェッチが動く', () => {
+    page.getFetchLink().click();
+    expect(page.getFetchDataDate()).toEqual('unko');
+  });
 });
