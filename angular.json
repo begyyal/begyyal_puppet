@@ -44,6 +44,23 @@
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true
+            },
+            "e2e": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.e2e.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": true,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true
             }
           }
         },
@@ -55,6 +72,10 @@
           "configurations": {
             "production": {
               "browserTarget": "begyyal_bomber:build:production"
+            },
+            "e2e": {
+              "browserTarget": "begyyal_bomber:build:e2e",
+              "proxyConfig": "proxy.conf.json" 
             }
           }
         },
@@ -106,6 +127,22 @@
               "namedChunks": false,
               "extractLicenses": true,
               "vendorChunk": false
+            },
+            "debug": {
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": true
+            },
+            "e2e": {
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": true
             }
           }
         }
@@ -119,7 +156,7 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "begyyal_bomber:serve"
+            "devServerTarget": "begyyal_bomber:serve:e2e"
           }
         },
         "lint": {
