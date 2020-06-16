@@ -1,0 +1,3 @@
+[submodule "ireko"]
+	path = ireko
+	url = https://github.com/begyyal/ireko.git
